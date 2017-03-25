@@ -1,7 +1,25 @@
+/*
+*
+* SETTINGS
+*-------------------------------------------------------------------------------
+*/
+/*
+* COLOR LEGEND
+*---------------------------------------
+*/
+/*
+* FONT LEGEND
+*---------------------------------------
+*/
+/*
+* MAIN
+*---------------------------------------
+*/
 body {
   background-color: #fff;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
+  line-height: 1.6;
   padding: 5.5rem 0;
 }
 
@@ -47,19 +65,19 @@ a:hover {
 }
 
 .section--primary {
-  background: rgb(27,117,187);
-  color: #FFF;
+  background: #1B75BB;
+  color: #fff;
 }
 
 .section--light {
-  background: rgb(0,176,216);
+  background: #49904a;
   color: #fff;
 }
 
 .headline {
   margin: 0.75rem 0;
   padding: 0.5rem 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .headline--alpha {
@@ -73,6 +91,15 @@ a:hover {
 
 .headline--centered {
   text-align: center;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /**
@@ -93,9 +120,8 @@ a:hover {
   line-height: 1;
   text-transform: uppercase;
   -webkit-transition: background .1s ease-in;
+  text-decoration: none;
 }
-
-.btn-opencfp,
 .btn-opencfp:hover {
   text-decoration: none;
 }
@@ -105,32 +131,29 @@ a:hover {
  * @tags ^button
  * @extends btn
  */
-.btn-opencfp-xsmall {
+.btn-xsmall {
   font-size: 1rem;
 }
-
-.btn-opencfp-small {
+.btn-small {
   font-size: 1.5rem;
 }
-
-.btn-opencfp-medium {
+.btn-medium {
   font-size: 2rem;
 }
-
-.btn-opencfp-large {
+.btn-large {
   font-size: 3rem;
 }
-
-.btn-opencfp-xlarge {
+.btn-xlarge {
   font-size: 4rem;
 }
-
-.btn-opencfp--full {
+.btn--full {
   display: block;
 }
-
-.btn-opencfp--wide {
+.btn--wide {
   padding: 1rem 4rem;
+}
+.btn--centered {
+  text-align: center;
 }
 
 /**
@@ -396,7 +419,7 @@ a:hover {
 }
 
 .navbar-opencfp .navbar-nav > li > a,
-.navbar-opencfp .navbar-nav .dropdown-menu > li > a{
+.navbar-opencfp .navbar-nav .dropdown-menu > li > a {
   border-top: 3px solid transparent;
   color: #fff;
   -webkit-transition: border .2s ease-in-out;
@@ -420,7 +443,28 @@ a:hover {
 }
 
 .navbar-opencfp .icon-bar {
-  background: #CCC;
+  background: #ccc;
+}
+
+.navbar-opencfp .site-link {
+  color: white;
+  font-size: 36px;
+  line-height: 1.5em;
+  text-decoration: none;
+}
+.navbar-opencfp .site-link:link {
+  color: #fff;
+}
+.navbar-opencfp .site-link:visited {
+  color: #fff;
+}
+.navbar-opencfp .site-link:hover, .navbar-opencfp .site-link:focus {
+  background-color: #5cb85c;
+  color: #fff;
+}
+.navbar-opencfp .site-link:active {
+  background-color: #fff;
+  color: #306131;
 }
 
 .nav-sidebar {

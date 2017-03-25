@@ -2,9 +2,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <img src="/assets/img/opencfp_generic_logo.png" class="svg-inject event-logo" alt="Event Logo">
+                    <img src="/assets/img/cfp-logo.png" class="svg-inject event-logo" alt="Event Logo">
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-push-1 col-md-8">
                     {% if cfp_open %}
                         <h1 class="headline headline-alpha">Call For Papers Now Open!</h1>
                         <h3 class="headline headline-alpha">Submissions accepted until {{ site.enddate | date(site.date_format) }}</h3>
@@ -19,7 +19,7 @@
                         <h3 class="headline headline-alpha">Submissions were accepted until {{ site.enddate }}</h3>
                     {% endif %}
                     <p>
-                        {% if cfp_open %}<a class="btn-opencfp btn-opencfp-medium btn-opencfp--outlined" href="{{ url('user_new') }}">Register Now</a>{% endif %}
+                        {% if cfp_open %}<a class="btn-opencfp btn-opencfp-medium btn-opencfp--register" href="{{ url('user_new') }}">Register Now</a>{% endif %}
                         <a class="btn-opencfp btn-opencfp-medium btn-opencfp--primary" href="{{ url('dashboard') }}">View Submissions</a>
                     </p>
                 </div>
@@ -37,7 +37,7 @@
             {%  else %}
                 <div class="col-md-8"><h3 class="headline headline--alpha">For More Information About The Conference</h3></div>
             {% endif %}
-            <div class="col-md-4 text-right"><a href="{{ site.eventurl }}" class="btn-opencfp btn-opencfp-medium btn-opencfp--light">Visit Conference Site</a></div>
+            <div class="col-md-4 text-right"><a href="{{ site.eventurl }}" class="btn-opencfp btn-opencfp-medium btn-opencfp--dark">Visit Conference Site</a></div>
         </div>
     </div>
 </section>
