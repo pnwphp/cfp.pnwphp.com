@@ -1,3 +1,5 @@
+@import "settings";
+
 body {
   background: #FFF;
   font-family: "Source Sans Pro", sans-serif;
@@ -6,20 +8,20 @@ body {
 }
 
 a {
-  color: rgb(27,117,187);
+  color: $blue;
 }
 
 a:hover {
-  color: rgb(0,176,216);
+  color: $blue-light;
 }
 
 .dashboard {
-  background: #ebeef1;
+  background: $white-soft;
 }
 
 .header {
-  background: #FFF;
-  color: #000;
+  background: $white;
+  color: $black;
   padding: 6rem 0;
 }
 
@@ -29,7 +31,7 @@ a:hover {
   position: fixed;
   left: 0;
   overflow: hidden;
-  background: #4f5061;
+  background: $gray-slate;
   z-index: 800;
 }
 
@@ -138,39 +140,57 @@ a:hover {
  * @tags ^button
  * @extends btn
  */
-.btn-opencfp--primary,
-.btn-opencfp--primary:hover{
-  background: rgb(27,117,187);
-  color: #FFF;
-}
+.btn-opencfp {
+	border-radius: 6px;
 
-.btn-opencfp--light {
-  background: #7e8690;
-  color: #FFF;
-}
+	&--primary,
+	&--primary:hover{
+	  background: $blue;
+	  color: $white;
+	}
 
-.btn-opencfp--light:hover {
-  background: #5c636c;
-  color: #FFF;
-}
+	&--register,
+	&--register:hover{
+	  background: $green;
+	  color: $white;
+	}
 
-.btn-opencfp--outlined {
-  background: transparent;
-  border-color: rgb(27,117,187);
-  color: rgb(27,117,187);
-}
 
-.btn-opencfp--outlined:hover {
-  background: rgb(27,117,187);
-  color: #FFF;
-}
+	&--light {
+	  background: #7e8690;
+	  color: $white;
+	}
 
-.btn-opencfp--centered {
-  text-align: center;
+	&--light:hover {
+	  background: $gray-slate;
+	  color: $white;
+	}
+
+	&--dark {
+	  background: $green-dark;
+	  color: $white;
+	}
+
+	&--dark:hover {
+	  background: $green;
+	  color: $white;
+	}
+
+	&--outlined {
+	  background: transparent;
+	  border-color: $blue;
+	  color: $blue;
+	}
+
+	&--outlined:hover {
+	  background: $blue;
+	  color: $white;
+	}
+
 }
 
 .module {
-  background: #FFF;
+  background: $white;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -180,8 +200,8 @@ a:hover {
 }
 
 .module__header {
-  background: rgb(27,117,187);
-  color: #FFF;
+  background: $blue;
+  color: $white;
   padding: 1rem 2rem;
 }
 
@@ -205,7 +225,7 @@ a:hover {
   border-radius: 5px;
   overflow: hidden;
   position: relative;
-  color: #fff;
+  color: $white;
 }
 
 .tile-content {
@@ -239,7 +259,7 @@ a:hover {
 }
 
 .tile-selected {
-  background: #852b99;
+  background: $purple;
 }
 
 .comment-box {
@@ -272,12 +292,12 @@ a:hover {
 }
 
 .comment-list__meta {
-  color: #ccc;
+  color: $gray-80;
   font-size: 75%;
 }
 
 .comment-list__author {
-  color: #999;
+  color: $gray-60;
   font-weight: bold;
 }
 
@@ -287,7 +307,7 @@ a:hover {
   left: -4.7rem;
   height: 32px;
   width: 32px;
-  border: 2px solid #FFF;
+  border: 2px solid $white;
   border-radius: 50%;
 }
 
@@ -297,7 +317,7 @@ a:hover {
 .primary-text,
 .megaphone-cover,
 .megaphone-end {
-  fill: rgb(27,117,187);
+  fill: $blue;
 }
 
 .base-text,
@@ -310,23 +330,23 @@ a:hover {
 }
 
 .admin-icon {
-  color: #CCC;
+  color: $gray-80;
 }
 
 .admin-icon--selected {
-  color: #f49c2c;
+  color: $orange;
 }
 
 .fa-thumbs-up.admin-icon--selected {
-  color: #5cb85c;
+  color: $green;
 }
 
 .fa-thumbs-down.admin-icon--selected {
-  color: #d9534f;
+  color: $red;
 }
 
 .fa-check-square.admin-icon--selected {
-  color: #852b99;
+  color: $purple;
 }
 
 .sort {
@@ -353,7 +373,7 @@ a:hover {
 
 .sort--asc,
 .sort--desc {
-  color: #000;
+  color: $black;
 }
 
 .talk-viewed {
@@ -380,7 +400,7 @@ a:hover {
 }
 
 .navbar-opencfp {
-  background: #374146;
+  background: $green;
 }
 
 .navbar-collapse {
@@ -390,7 +410,7 @@ a:hover {
 .navbar-opencfp .navbar-nav > li > a,
 .navbar-opencfp .navbar-nav .dropdown-menu > li > a{
   border-top: 3px solid transparent;
-  color: #FFF;
+  color: $white;
   -webkit-transition: border .2s ease-in-out;
 }
 
@@ -405,15 +425,41 @@ a:hover {
 .navbar-opencfp .nav .open>a:focus
 {
   background: none;
-  border-color: rgb(27,117,187);
+  border-color: $blue;
 }
 
 .navbar-opencfp .navbar-toggle {
-  background: #FFF;
+  background: $white;
 }
 
 .navbar-opencfp .icon-bar {
-  background: #CCC;
+  background: $gray-80;
+}
+
+.navbar-opencfp .site-link {
+  color: white;
+  font-size: 36px;
+  line-height: 1.5em;
+  text-decoration: none;
+
+  &:link {
+	  color: $white;
+  }
+
+  &:visited {
+	  color: $white;
+  }
+
+  &:hover, &:focus {
+	  background-color: $green-light;
+	  color: $white;
+  }
+
+  &:active{
+	  background-color: $white;
+	  color: $green-dark;
+  }
+
 }
 
 .nav-sidebar {
@@ -425,23 +471,23 @@ a:hover {
 .nav-sidebar > li > a {
   padding-right: 20px;
   padding-left: 20px;
-  color: #FFF;
+  color: $white;
 }
 .nav-sidebar > li > a:hover {
   background: #71738b;
 }
 
 .nav-sidebar > li li {
-  list-style: none;
+  list-style: none
 }
 .nav-sidebar > li li > a {
-  color: #bbb;
+  color: $gray-80;
 }
 
 .nav-icon {
   display: inline-block;
   margin-right: 0.5rem;
-  fill: #FFF;
+  fill: $white;
 }
 
 .icon-16 {

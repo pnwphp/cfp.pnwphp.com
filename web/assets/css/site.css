@@ -1,16 +1,16 @@
 body {
-  background: #FFF;
-  font-family: "Source Sans Pro", sans-serif;
+  background-color: #fff;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   padding: 5.5rem 0;
 }
 
 a {
-  color: rgb(27,117,187);
+  color: #1B75BB;
 }
 
 a:hover {
-  color: rgb(0,176,216);
+  color: #00b0d8;
 }
 
 .dashboard {
@@ -18,7 +18,7 @@ a:hover {
 }
 
 .header {
-  background: #FFF;
+  background: #fff;
   color: #000;
   padding: 6rem 0;
 }
@@ -138,39 +138,45 @@ a:hover {
  * @tags ^button
  * @extends btn
  */
-.btn-opencfp--primary,
-.btn-opencfp--primary:hover{
-  background: rgb(27,117,187);
-  color: #FFF;
+.btn-opencfp {
+  border-radius: 6px;
 }
-
+.btn-opencfp--primary, .btn-opencfp--primary:hover {
+  background: #1B75BB;
+  color: #fff;
+}
+.btn-opencfp--register, .btn-opencfp--register:hover {
+  background: #49904a;
+  color: #fff;
+}
 .btn-opencfp--light {
   background: #7e8690;
-  color: #FFF;
+  color: #fff;
 }
-
 .btn-opencfp--light:hover {
-  background: #5c636c;
-  color: #FFF;
+  background: #4f5061;
+  color: #fff;
 }
-
+.btn-opencfp--dark {
+  background: #306131;
+  color: #fff;
+}
+.btn-opencfp--dark:hover {
+  background: #49904a;
+  color: #fff;
+}
 .btn-opencfp--outlined {
   background: transparent;
-  border-color: rgb(27,117,187);
-  color: rgb(27,117,187);
+  border-color: #1B75BB;
+  color: #1B75BB;
 }
-
 .btn-opencfp--outlined:hover {
-  background: rgb(27,117,187);
-  color: #FFF;
-}
-
-.btn-opencfp--centered {
-  text-align: center;
+  background: #1B75BB;
+  color: #fff;
 }
 
 .module {
-  background: #FFF;
+  background: #fff;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -180,8 +186,8 @@ a:hover {
 }
 
 .module__header {
-  background: rgb(27,117,187);
-  color: #FFF;
+  background: #1B75BB;
+  color: #fff;
   padding: 1rem 2rem;
 }
 
@@ -287,7 +293,7 @@ a:hover {
   left: -4.7rem;
   height: 32px;
   width: 32px;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   border-radius: 50%;
 }
 
@@ -297,7 +303,7 @@ a:hover {
 .primary-text,
 .megaphone-cover,
 .megaphone-end {
-  fill: rgb(27,117,187);
+  fill: #1B75BB;
 }
 
 .base-text,
@@ -310,7 +316,7 @@ a:hover {
 }
 
 .admin-icon {
-  color: #CCC;
+  color: #ccc;
 }
 
 .admin-icon--selected {
@@ -318,7 +324,7 @@ a:hover {
 }
 
 .fa-thumbs-up.admin-icon--selected {
-  color: #5cb85c;
+  color: #49904a;
 }
 
 .fa-thumbs-down.admin-icon--selected {
@@ -334,6 +340,7 @@ a:hover {
   cursor: pointer;
   position: relative;
 }
+
 .sort:before {
   font-family: 'FontAwesome';
   position: absolute;
@@ -359,6 +366,7 @@ a:hover {
 .talk-viewed {
   opacity: 0.5;
 }
+
 .talk-viewed:hover {
   opacity: 1;
 }
@@ -380,7 +388,7 @@ a:hover {
 }
 
 .navbar-opencfp {
-  background: #374146;
+  background: #49904a;
 }
 
 .navbar-collapse {
@@ -390,7 +398,7 @@ a:hover {
 .navbar-opencfp .navbar-nav > li > a,
 .navbar-opencfp .navbar-nav .dropdown-menu > li > a{
   border-top: 3px solid transparent;
-  color: #FFF;
+  color: #fff;
   -webkit-transition: border .2s ease-in-out;
 }
 
@@ -398,18 +406,17 @@ a:hover {
 .navbar-opencfp .navbar-nav > .active > a,
 .navbar-opencfp .navbar-nav > .active > a:hover,
 .navbar-opencfp .navbar-nav > .active > a:focus,
-.navbar-opencfp .navbar-nav .dropdown-menu>li>a:hover,
-.navbar-opencfp .navbar-nav .dropdown-menu>li>a:focus,
-.navbar-opencfp .nav .open>a,
-.navbar-opencfp .nav .open>a:hover,
-.navbar-opencfp .nav .open>a:focus
-{
+.navbar-opencfp .navbar-nav .dropdown-menu > li > a:hover,
+.navbar-opencfp .navbar-nav .dropdown-menu > li > a:focus,
+.navbar-opencfp .nav .open > a,
+.navbar-opencfp .nav .open > a:hover,
+.navbar-opencfp .nav .open > a:focus {
   background: none;
-  border-color: rgb(27,117,187);
+  border-color: #1B75BB;
 }
 
 .navbar-opencfp .navbar-toggle {
-  background: #FFF;
+  background: #fff;
 }
 
 .navbar-opencfp .icon-bar {
@@ -425,8 +432,9 @@ a:hover {
 .nav-sidebar > li > a {
   padding-right: 20px;
   padding-left: 20px;
-  color: #FFF;
+  color: #fff;
 }
+
 .nav-sidebar > li > a:hover {
   background: #71738b;
 }
@@ -434,14 +442,15 @@ a:hover {
 .nav-sidebar > li li {
   list-style: none;
 }
+
 .nav-sidebar > li li > a {
-  color: #bbb;
+  color: #ccc;
 }
 
 .nav-icon {
   display: inline-block;
   margin-right: 0.5rem;
-  fill: #FFF;
+  fill: #fff;
 }
 
 .icon-16 {
