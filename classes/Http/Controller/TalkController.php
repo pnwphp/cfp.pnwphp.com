@@ -400,6 +400,7 @@ class TalkController extends BaseController
             ];
 
             $talk = $talk_mapper->build($data);
+            $talk->isNew(false);
 
             try {
                 $talk_data = $talk_mapper->save($talk, ['relations' => true]);
