@@ -399,8 +399,11 @@ class TalkController extends BaseController
                 'updated_at' => new \DateTime(),
             ];
 
-            $talk = $talk_mapper->build($data);
-            $talk->isNew(false);
+            $talk = $talk_mapper->get($data['id']);
+
+            foreach ($data as $field => $value) {
+                $talk->$field = $value;
+            }
 
             try {
                 $talk_data = $talk_mapper->save($talk, ['relations' => true]);
